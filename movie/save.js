@@ -16,15 +16,12 @@ module.exports = function (req, res, url) {
 	switch (url.pathname) {
 		case "/goapi/saveMovie/": {
 			loadPost(req, res).then(([data, mId]) => {
-				const trigAutosave = data.is_triggered_by_autosave;
-				if (trigAutosave && !data.movieId ) {
-					thumb = fs.readFileSync(process.env.THUMB_BASE_URL + "/285747869.jpg");
-				} else {
-					thumb = data.thumbnail_large && Buffer.from(data.thumbnail_large, "base64");
-				}
-
-				var body = Buffer.from(data.body_zip, "base64");
-				movie.save(body, thumb, mId, data.presaveId).then((nId) => res.end("0" + nId));
+		                const trigAutosave = data.is_triggered_by_autosave;
+		                if (trigAutosave && (!data.movieId || data.noAutosave)) return res.end("0");
+                                
+		                var body = Buffer.from(data.body_zip, "base64");
+		                var thumb = data.thumbnail_large && Buffer.from(data.thumbnail_large, "base64");
+		                movie.save(body, thumb, mId, data.presaveId).then((nId) => res.end("0" + nId));
 			});
 			return true;
 		}

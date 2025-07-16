@@ -110,12 +110,18 @@ module.exports = function (req, res, url) {
 	var makeZip = false;
 	switch (url.pathname) {
 		case "/goapi/getUserAssets/":
+		case "/goapi/getCommunityAssets/":
+		case "/api_v2/assets/team":
+		case "/api_v2/assets/shared":
+		case "/goapi/getSysTemplates/":
+		case "/goapi/getSysTemplateAttributes/":
+		case "/goapi/updateSysTemplateAttributes/":
 			makeZip = true;
 			break;
 		case "/goapi/getUserAssetsXml/":
-			break;
-		default:
-			return;
+			break;	
+		default: 
+		return;
 	}
 
 	switch (req.method) {
