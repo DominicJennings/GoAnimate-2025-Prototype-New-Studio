@@ -48,7 +48,7 @@ module.exports = function (req, res, url) {
 	}
 	switch (url.pathname) {
 		case "/cc": {
-			title = "Character Creator";
+			title = "Character Creator On GoAnimate 2014 Fan Made Online";
 			attrs = {
 				data: process.env.SWF_URL + "/cc.swf", // data: 'cc.swf',
 				type: "application/x-shockwave-flash",
@@ -62,7 +62,7 @@ module.exports = function (req, res, url) {
 					storePath: process.env.STORE_URL + "/<store>",
 					clientThemePath: process.env.CLIENT_URL + "/<client_theme>",
 					original_asset_id: query["id"] || null,
-					themeId: "custom",
+					themeId: "family",
 					ut: 60,
 					bs: "default",
 					appCode: "go",
@@ -81,7 +81,7 @@ module.exports = function (req, res, url) {
 		}
 
 		case "/cc_browser": {
-			title = "CC Browser";
+			title = "CC Browser On GoAnimate 2014 Fan Made Online";
 			attrs = {
 				data: process.env.SWF_URL + "/cc_browser.swf", // data: 'cc_browser.swf',
 				type: "application/x-shockwave-flash",
@@ -118,7 +118,7 @@ module.exports = function (req, res, url) {
 				query.movieId && query.movieId.startsWith("m")
 					? query.movieId
 					: `m-${fUtil[query.noAutosave ? "getNextFileId" : "fillNextFileId"]("movie-", ".xml")}`;
-			title = "Video Editor";
+			title = "Video Editor On GoAnimate 2014 Fan Made Online";
 			attrs = {
 				data: process.env.SWF_URL + "/go_full.swf",
 				type: "application/x-shockwave-flash",
@@ -132,9 +132,8 @@ module.exports = function (req, res, url) {
 					isEmbed: 1,
 					ctc: "go",
 					ut: 30,
-					bs: "default",
 					userId: 2152,
-			    m_mode: "Y",
+			                m_mode: "Y",
 					appCode: "go",
 					page: "",
 					siteId: "go",
@@ -142,7 +141,6 @@ module.exports = function (req, res, url) {
 					isLogin: "Y",
 					retut: 0,
 					clientThemePath: process.env.CLIENT_URL + "/<client_theme>",
-					themeId: "custom",
 					tray: "custom",
 					tlang: "en_US",
 					presaveId: presave,
@@ -150,7 +148,7 @@ module.exports = function (req, res, url) {
 					isWide: 1,
 					collab: 0,
 					movieLid: 10,
-			    has_asset_char: "1",
+			                has_asset_char: "0",
 					nextUrl: "/html/list/movies.html",
 					tutorial: 1,
 				},
@@ -160,7 +158,7 @@ module.exports = function (req, res, url) {
 		}
 
 		case "/player": {
-			title = "Player";
+			title = "Video Player On GoAnimate 2014 Fan Made Online";
 			attrs = {
 				data: process.env.SWF_URL + "/player.swf",
 				type: "application/x-shockwave-flash",

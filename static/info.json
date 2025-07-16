@@ -33,6 +33,12 @@
 			},
 			"content": "<cross-domain-policy><allow-access-from domain=\"*\"/></cross-domain-policy>"
 		},
+		"/static/animation/importer.swf": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "95"
+		},
 		"/cc.swf": {},
 		"/go_full.swf": {},
 		"/favicon.ico": {},
@@ -83,13 +89,13 @@
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
 			},
-			"content": "<?xml encoding=\"UTF-8\"?><watermarks><watermark style=\"freeTrial\"/></watermarks>"
+			"content": "<?xml encoding=\"UTF-8\"?><watermarks><watermark style=\"default\"/></watermarks>"
 		},
 		"/api_v2/asset/get": {
 			"headers": {
-				"Content-Type": "text/html; charset=UTF-8"
+				"Content-Type": "application/json"
 			},
-			"content": "1"
+			"content": "{\"status\":\"ok\",\"data\":[]}"
 		},
 		"/goapi/rebuildTTS/": {
 			"headers": {
@@ -108,6 +114,35 @@
 				"Content-Type": "text/html; charset=UTF-8"
 			},
 			"content": "1"
+		},
+		"/api_v2/text_component/get_list": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/text_component/add": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/assets/team": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/assets/shared": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/html/list/movies.html": {
+			"headers": {
+				"Location": "/html/list/movies.html"
+			}
 		}
 	},
 	"pages": {
