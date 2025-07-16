@@ -48,7 +48,7 @@ module.exports = function (req, res, url) {
 	}
 	switch (url.pathname) {
 		case "/cc": {
-			title = "Character Creator On GoAnimate 2014 Fan Made Online";
+			title = "Character Creator On GoAnimate 2025 Prototype New Studio";
 			attrs = {
 				data: process.env.SWF_URL + "/cc.swf", // data: 'cc.swf',
 				type: "application/x-shockwave-flash",
@@ -81,7 +81,7 @@ module.exports = function (req, res, url) {
 		}
 
 		case "/cc_browser": {
-			title = "CC Browser On GoAnimate 2014 Fan Made Online";
+			title = "CC Browser On GoAnimate 2025 Prototype New Studio";
 			attrs = {
 				data: process.env.SWF_URL + "/cc_browser.swf", // data: 'cc_browser.swf',
 				type: "application/x-shockwave-flash",
@@ -118,7 +118,7 @@ module.exports = function (req, res, url) {
 				query.movieId && query.movieId.startsWith("m")
 					? query.movieId
 					: `m-${fUtil[query.noAutosave ? "getNextFileId" : "fillNextFileId"]("movie-", ".xml")}`;
-			title = "Video Editor On GoAnimate 2014 Fan Made Online";
+			title = "Video Editor GoAnimate 2025 Prototype New Studio";
 			attrs = {
 				data: process.env.SWF_URL + "/go_full.swf",
 				type: "application/x-shockwave-flash",
@@ -158,7 +158,7 @@ module.exports = function (req, res, url) {
 		}
 
 		case "/player": {
-			title = "Video Player On GoAnimate 2014 Fan Made Online";
+			title = "Video Player On GoAnimate 2025 Prototype New Studio";
 			attrs = {
 				data: process.env.SWF_URL + "/player.swf",
 				type: "application/x-shockwave-flash",
